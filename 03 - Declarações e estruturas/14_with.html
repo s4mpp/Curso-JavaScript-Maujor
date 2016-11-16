@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<title>Curso Javascript</title>
+</head>
+<body>
+	
+
+
+
+	<script>
+		
+			var Carro = {
+				marca: 'Renault',
+				modelo: 'Logan',
+				dimensoes: {
+					comprimento: 4.25,
+					largura: 1.73,
+					altura: 1.52
+				}
+			}
+
+			var ref = Carro.dimensoes;
+			alert('Referencia: ' + ref.comprimento);
+			alert('Referencia: ' + ref.largura);
+			alert('Referencia: ' + ref.altura);
+
+			with(Carro.dimensoes) {
+				alert('with: ' + comprimento);
+				alert('with: ' + largura);
+				alert('with: ' + altura);
+			}
+
+	</script>
+</body>
+</html>

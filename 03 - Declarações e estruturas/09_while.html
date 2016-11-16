@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<title>Curso Javascript</title>
+</head>
+<body>
+	
+
+
+
+	<script>
+		
+			var msg = '', j = 0;
+			while(j <= 10) {
+
+				if(j == 10) {
+					msg += j;
+					break;
+				}
+				
+				msg += j + ', ';
+				j++;
+			}
+
+			alert('Números de 0 a 10: ' + msg);
+
+
+			//---------------------------------------------
+
+
+			var msg = '', j = 0;
+			while(j <= 10) {
+
+				if(j == 10) {
+					msg += j;
+					break;
+				}
+
+				if(j % 2 == 0) {
+					msg += j + ', ';
+				}
+
+				j++;
+			}
+
+			alert('Números pares de 0 a 10: ' + msg);
+
+
+
+	</script>
+</body>
+</html>

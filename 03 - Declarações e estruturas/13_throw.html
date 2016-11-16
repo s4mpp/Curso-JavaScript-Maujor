@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<title>Curso Javascript</title>
+</head>
+<body>
+	
+
+
+
+	<script>
+		
+			var x = prompt('Entre um numero maior que 0 e menor que 11', '');
+
+			try {
+				if (x <= 0) {
+					throw('er1');
+				}
+
+				if(x >= 11) {
+					throw('er2');
+				}
+
+				if(isNaN(parseInt(x))) {
+					throw('er3'); 
+				}
+			} catch(e) {
+				if(e == 'er1') {
+					alert('O número deve ser maior que 0');
+				}
+				if(e == 'er2') {
+					alert('O número deve ser menor que 11');
+				}
+				if(e == 'er3') {
+					alert('Entre somente números');
+				}
+			}
+
+
+			//-------------------------------------------------------
+
+
+			var x = prompt('Entre um número maior que 0 e menor que 11');
+
+			try {
+
+				if(x <= 0) {
+					throw new Error('O número deve ser maior que 0');
+				}
+
+				if(x >= 11) {
+					throw new Error('O número deve ser menor que 11');
+				}
+
+				if(isNaN(parseInt(x))) {
+					throw new Error('Entre somente números');
+				}
+
+			} catch(e) {
+				alert(e.message);
+			}
+
+	</script>
+</body>
+</html>
