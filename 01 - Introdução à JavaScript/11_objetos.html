@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<title>Curso Javascript</title>
+</head>
+<body>
+	
+
+
+
+	<script>
+		//Criando um objeto
+		var Carro = {
+			marca: 'Renault',
+			modelo: 'Logan',
+			ipva: function(ano) {
+				return 2 * ano; //metodo ficticio para demostrar o funcionamento de metodos dentro do objeto
+			},
+			dimensoes: {
+				comprimento: 4.25,
+				largura: 1.73
+			}
+		}
+		console.log(Carro);
+
+		//Acessando as propriedades do objeto
+		console.log(Carro.marca); //Renault
+		console.log(Carro.modelo); //Logan
+
+
+		//Acessando metodos do objeto
+		console.log(Carro.ipva(2016));
+
+
+		//Criando objeto pela sintaxe formal
+		var Car = new Object();
+		Car.nome = 'Fusca';
+		Car.marca = 'Volks';
+		console.log(Car);
+
+		
+		//Criando objeto pelo construtor
+		function User(nome, idade) {
+			this.nome = nome;
+			this.idade = idade;
+		}
+		var usuario = new User('Samuel', 24);
+		console.log(usuario);
+
+	</script>
+</body>
+</html>

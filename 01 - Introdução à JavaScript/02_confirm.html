@@ -10,13 +10,41 @@
 
 
 	<script>
-		var confirm = confirm('Alô Mundo\ncheguei');
-
-		if(confirm) {
-			alert('Voce confirmou');
+		//cria uma mensagem normal
+		var message = confirm('Alô Mundo\ncheguei');
+		//verifica a escolha
+		if(message) {
+			//se sim
+			console.log('Voce confirmou');
 		} else {
-			alert('Voce não confirmou')
+			//se nao
+			console.log('Voce não confirmou');
 		}
+
+		//cria uma pergunta qualquer
+		var pergunta = window.confirm('Voce confirma isso?');
+		//mostra o resultado
+		console.log(pergunta);
+
+		//cria uma pergunta qualquer
+		var answer = confirm('Escolha um');
+		//verifica a resposta
+		if(answer) {
+			//se sim, cria outra pergunta
+			var conf = confirm('Voce tem certeza?');
+			//verifica novamente a resposta
+			if(conf) {
+				//se foi confirmado
+				console.log('Entao ta');
+			} else {
+				//se nao foi confirmdo
+				console.log('Ainda bem');
+			}
+		} else {
+			//se a primeira pergunta foi negada
+			console.log('Voce nao escolheu');
+		}
+
 	</script>
 </body>
 </html>

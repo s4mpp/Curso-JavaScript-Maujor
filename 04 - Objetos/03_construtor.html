@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<title>Curso Javascript</title>
+</head>
+<body>
+	
+
+
+
+	<script>
+		
+		function Cilindro(r, h, medida) {
+			this.raioBase = r;
+			this.altura = h;
+			this.medida = medida;
+			this.areaBase = function calculaAreaBase() {
+				aBase = Math.PI * Math.pow(this.raioBase, 2);
+				return aBase;
+			},
+			this.areaLateral = function calculaAreaLateral() {
+				aLateral = 2 * Math.PI * this.raioBase * this.altura;
+				return aLateral;
+			},
+			this.areaTotal = function calculaAreaTotal() {
+				return 2 * aBase + aLateral;
+			},
+			this.volume = function calculaVolume() {
+				return aBase * this.altura;
+			}
+		}
+
+		cilindroUm = new Cilindro(2, 5);
+
+		alert('Raio da base: ' + cilindroUm.raioBase);
+		alert('Altura: ' + cilindroUm.altura);
+		alert('Área da base: ' + cilindroUm.areaBase());
+		alert('Área lateral: ' + cilindroUm.areaLateral());
+		alert('Área total: ' + cilindroUm.areaTotal());
+		alert('Volume: ' + cilindroUm.volume());
+
+	</script>
+</body>
+</html>

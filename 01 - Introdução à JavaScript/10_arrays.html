@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<title>Curso Javascript</title>
+</head>
+<body>
+	
+
+
+
+	<script>
+		
+		//Array simples
+		var array = ['laranja', 34, 'casa', true, [1, 3, 5]];
+		console.log(array)
+
+		//Criando array com objeto construtor
+		var arr = new Array();
+		arr[0] = 'ola';
+		arr[1] = 'mundo';
+		console.log(arr);
+
+		//Criando array com construtor e parametros
+		var a = new Array(1, 2, 3, 'Samuel', new Array(3, 4));
+		console.log(a);
+
+		//Recuperando item do array
+		var ar = ['laranja', 'casa', true];
+		console.log(ar[0]); //laranja (item 0)
+
+		//Indices tipo string
+		var arreio = new Array();
+		arreio['nome'] = 'Samuel';
+		arreio['sobrenome'] = 'Pacheco';
+		console.log(arreio);
+		console.log(arreio['nome']);
+
+	</script>
+</body>
+</html>

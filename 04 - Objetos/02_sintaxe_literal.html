@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<title>Curso Javascript</title>
+</head>
+<body>
+	
+
+
+
+	<script>
+		
+		var livro = {
+			'titulo': 'AJAX com JQuery',
+			'autor': 'Mauricio Samy Silva',
+			'paginas': 432,
+			'preco': 69.90,
+			'frete': function(cepOrigim, cepDestino, peso) {
+				var valorFrete = 29.56;			
+				return valorFrete;
+			},
+			'capitulos': {
+				'capitulo1': 'Revisão do AJAX',
+				'capitulo2': 'Funções para requisições AJAX',
+				'capitulo3': 'Eventos e miscelânea',
+			}
+		}
+
+
+		var nomeAutor = livro.autor;
+		var capituloTres = livro.capitulos.capitulo3;
+		var valorFrete = livro.frete('87265000', '91920410', 2.996);
+
+		alert(nomeAutor);
+		alert(capituloTres);
+		alert(valorFrete);
+
+
+		var pares = '';
+		for(var prop in livro) {
+			if(typeof livro[prop] == 'object') {
+				for(var prop1 in livro[prop]) {
+					pares += prop1 + ': ' + livro[prop][prop1] + '\n';
+				}
+			} else {
+				pares += prop + ': ' + livro[prop] + '\n';
+			}
+		}
+
+		alert(pares);
+
+	</script>
+</body>
+</html>

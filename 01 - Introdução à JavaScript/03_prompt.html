@@ -10,9 +10,27 @@
 
 
 	<script>
-		var prompt = prompt('Olá visitante, informe sua data de nascimento', 'dd/mm/aaaa');
+		//Mensagem normal e armazena numa variavel
+		var nome = prompt('Olá visitante, informe seu nome');
+		//recupera o resultado atraves da variavel
+		console.log('Voce digitou ' + nome);
+		console.log(nome)
 
-		alert('Voce digitou ' +prompt)
+		//Mensagem com dica de resposta e sendo chamada pelo objeto global window
+		var dn = window.prompt('Digite sua data de nascimento', 'dd/mm/yyyy');
+		//mostra a resposta
+		console.log(dn);
+
+		//Ao clicar em cancelar, a variavel é atribuida com o valor null. Se nao for digitado nada, retorna uma string vazia.
+		var teste = prompt('Clique em cancelar');
+		//verifica se é igual a null o resultado
+		if(teste === null) {
+			//mostra que foi clicado em Cancelar
+			console.log('Voce clicou em Cancelar');
+		} else {
+			//mostra que clicou em ok
+			console.log('Voce clicou em OK');
+		}
 	</script>
 </body>
 </html>

@@ -10,7 +10,35 @@
 
 
 	<script>
+		//alerta com string simples
 		alert('Alô Mundo');
+
+		//alerta sendo chamado pelo objeto global window
+		window.alert('Teste');
+
+		//alerta com objeto (mostra [object object])
+		window.alert({});
+
+		//construtor de objeto no alert
+		alert(new Date());
+
+		//alerta numerico
+		alert(2);
+
+		//alerta com construtor de array
+		alert(new Array('a', 'b', 'c'));
+
+		//alerta com array
+		alert([1,23,43,5]);
+
+		//define uma variavel de teste
+		var teste = 'hueheuhehu teste';
+		//alerta com a variavel criada
+		alert(teste)
+
+		//Atribuindo o alert a uma variavel
+		var alerta = alert('Teste bizarro');
+		console.log(alerta); //undefined
 	</script>
 </body>
 </html>
