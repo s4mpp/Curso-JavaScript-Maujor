@@ -10,7 +10,8 @@
 
 
 	<script>
-		
+			
+			//Cria o objeto
 			var Carro = {
 				marca: 'Renault',
 				modelo: 'Logan',
@@ -19,13 +20,15 @@
 				altura: 1.52
 			}
 
+			//Cria a variavel inicial
 			var msg = '', k;
 
+			//Percorre o objeto Carro atraves de k
 			for(k in Carro) {
 				msg += k + ': ' + Carro[k] + '\n';
 			}
 
-			alert(msg);
+			console.log(msg);
 
 
 

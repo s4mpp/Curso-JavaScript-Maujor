@@ -11,32 +11,38 @@
 
 	<script>
 		
+		//Atribui o objeto à uma variavel
 		var livro = {
+			//Cria as propriedades
 			'titulo': 'AJAX com JQuery',
 			'autor': 'Mauricio Samy Silva',
 			'paginas': 432,
 			'preco': 69.90,
-			'frete': function(cepOrigim, cepDestino, peso) {
-				var valorFrete = 29.56;			
-				return valorFrete;
-			},
 			'capitulos': {
 				'capitulo1': 'Revisão do AJAX',
 				'capitulo2': 'Funções para requisições AJAX',
 				'capitulo3': 'Eventos e miscelânea',
-			}
+			},
+			//Cria metodos
+			'frete': function(cepOrigem, cepDestino, peso) {
+				var valorFrete = 29.56;			
+				return valorFrete;
+			},
 		}
 
-
+		//Obtem as priprieades
 		var nomeAutor = livro.autor;
 		var capituloTres = livro.capitulos.capitulo3;
+
+		//Obtem um metodo
 		var valorFrete = livro.frete('87265000', '91920410', 2.996);
 
-		alert(nomeAutor);
-		alert(capituloTres);
-		alert(valorFrete);
+		//Mostra o conteudo
+		console.log(nomeAutor);
+		console.log(capituloTres);
+		console.log(valorFrete);
 
-
+		//Faz um loop entre os dados do objeto e objeto dentro das propriedades
 		var pares = '';
 		for(var prop in livro) {
 			if(typeof livro[prop] == 'object') {
@@ -48,7 +54,7 @@
 			}
 		}
 
-		alert(pares);
+		console.log(pares);
 
 	</script>
 </body>

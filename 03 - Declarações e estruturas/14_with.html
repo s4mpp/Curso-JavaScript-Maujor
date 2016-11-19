@@ -10,7 +10,7 @@
 
 
 	<script>
-		
+			//Cria um objeto
 			var Carro = {
 				marca: 'Renault',
 				modelo: 'Logan',
@@ -21,15 +21,19 @@
 				}
 			}
 
-			var ref = Carro.dimensoes;
-			alert('Referencia: ' + ref.comprimento);
-			alert('Referencia: ' + ref.largura);
-			alert('Referencia: ' + ref.altura);
+			//2 MANEIRAS DE FAZER A MESMA COISA
 
+			//Cria uma referencia à propriedade dimensoes
+			var ref = Carro.dimensoes;
+			console.log('tete: ' + ref.comprimento);
+			console.log('tete: ' + ref.largura);
+			console.log('tete: ' + ref.altura);
+
+			//Cria um escopo dentro da propriedade
 			with(Carro.dimensoes) {
-				alert('with: ' + comprimento);
-				alert('with: ' + largura);
-				alert('with: ' + altura);
+				console.log('teste: ' + comprimento);
+				console.log('teste: ' + largura);
+				console.log('teste: ' + altura);
 			}
 
 	</script>

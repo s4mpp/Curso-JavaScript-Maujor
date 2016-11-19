@@ -10,13 +10,18 @@
 
 
 	<script>
-		
+			//tenta executar
 			try {
 				var x = u; //erro proposital (u nao esta definido) 
 				var y = x + 2
 				alert(y)
+
+			//Caso de erro,executa isso
 			} catch(e) {
-				alert(e.message + '\n' + e.name + '\n' + e.toString());
+				//mostra os erros
+				console.log(e.message );
+				console.log(e.name);
+				console.log(e.toString());
 			}
 
 

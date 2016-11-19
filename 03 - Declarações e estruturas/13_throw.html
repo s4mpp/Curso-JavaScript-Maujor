@@ -10,55 +10,75 @@
 
 
 	<script>
-		
+
+			//TRATAMENTO DE ERROS
+
+			//Peda pra digitar um numero para testar. è esperado numero maiores que 0 e menores que 12
 			var x = prompt('Entre um numero maior que 0 e menor que 11', '');
 
+			//Inicia a validaçaõ
 			try {
+				//Verifica se é menor  ou igual a 0
 				if (x <= 0) {
+					//Cria um erro referente à exceção
 					throw('er1');
 				}
 
+				//Verifica se é maior ou igual a 12
 				if(x >= 11) {
+					//Cria um erro referente à exceção
 					throw('er2');
 				}
 
+				//Verifica se nao é um numero
 				if(isNaN(parseInt(x))) {
+					//Cria um erro referente à exceção
 					throw('er3'); 
 				}
+
+			//Cria os erros personalizados
 			} catch(e) {
+				//Personaliza um erro e mostra a mensagem referente ao erro
 				if(e == 'er1') {
-					alert('O número deve ser maior que 0');
+					console.log('O número deve ser maior que 0');
 				}
+				//Personaliza um erro e mostra a mensagem referente ao erro
 				if(e == 'er2') {
-					alert('O número deve ser menor que 11');
+					console.log('O número deve ser menor que 11');
 				}
+				//Personaliza um erro e mostra a mensagem referente ao erro
 				if(e == 'er3') {
-					alert('Entre somente números');
+					console.log('Entre somente números');
 				}
 			}
 
 
 			//-------------------------------------------------------
 
-
+			//Faz a mesma validaçaõ
 			var x = prompt('Entre um número maior que 0 e menor que 11');
 
+			//testa as verificaçãos
 			try {
 
 				if(x <= 0) {
+					//Adiciona a mensagem direto no erro
 					throw new Error('O número deve ser maior que 0');
 				}
 
 				if(x >= 11) {
+					//Adiciona a mensagem direto no erro
 					throw new Error('O número deve ser menor que 11');
 				}
 
 				if(isNaN(parseInt(x))) {
+					//Adiciona a mensagem direto no erro
 					throw new Error('Entre somente números');
 				}
 
+			//Mostra o erro diretamente
 			} catch(e) {
-				alert(e.message);
+				console.log(e.message);
 			}
 
 	</script>

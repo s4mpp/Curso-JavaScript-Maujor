@@ -10,41 +10,53 @@
 
 
 	<script>
-		
+			
+			//Cria uma variavel inicial e seta o contador como 0			
 			var msg = '', j = 0;
+
+			//Faz um loop enquanto o contador for <= a 10
 			while(j <= 10) {
 
+				//Verifica se o contador é 10
 				if(j == 10) {
+					//incrementa e para o loop
 					msg += j;
 					break;
 				}
-				
+				//incrementa com virgula e tambem o contador
 				msg += j + ', ';
 				j++;
 			}
 
-			alert('Números de 0 a 10: ' + msg);
+			console.log('Números de 0 a 10: ' + msg);
 
 
 			//---------------------------------------------
 
-
+			
+			//Cria uma variavel inicial e seta o contador como 0
 			var msg = '', j = 0;
+
+			//Faz um loop enquanto o contador for <= a 10
 			while(j <= 10) {
 
+				//Verifica se o contador é 10
 				if(j == 10) {
+					//incrementa e para o loop
 					msg += j;
 					break;
 				}
 
+				//se for par, incrementa a string com ,
 				if(j % 2 == 0) {
 					msg += j + ', ';
 				}
 
+				//incrementa o contador
 				j++;
 			}
 
-			alert('Números pares de 0 a 10: ' + msg);
+			console.log('Números pares de 0 a 10: ' + msg);
 
 
 
